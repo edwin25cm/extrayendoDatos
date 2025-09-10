@@ -22,8 +22,8 @@ app.use(express.static('public'));
 
 app.post('/save-personas', async(req, res)=> {
 
-  const {Nombre, Apellido,  dni, email, FechaNacimiento} = req.body;
-  //const {Apellido, Nombre, DNI, Email, FechaNacimiento} = req.body;
+  const {Nombre, Apellido,  dni, email, FechaNacimiento,} = req.body;
+  //const {Apellido, Nombre, DNI, Email, FechaNacimiento, Operaciones} = req.body;
   try{
         await sql.connect(config);
         const request = new sql.Request();
