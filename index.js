@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require("cors");
 const sql = require('mssql');
 const app = express();
 app.use(express.json());
@@ -19,6 +20,7 @@ const config = {
 
 app.use(express.static('public'));
 
+app.use(cors());
 
 app.post('/save-personas', async(req, res)=> {
 

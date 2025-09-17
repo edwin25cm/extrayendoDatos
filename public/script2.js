@@ -8,13 +8,13 @@ new gridjs.Grid({
         { id: "DNI", name: "DNI" },
         { id: "Email", name: "email" },
         { id: "FechaNacimiento", name: "FechaNacimiento"},
-        { id: "Operaciones", name: "Operaciones"}
+        { id: "Operaciones", name: "Operaciones",
         
-        formatter, (_, row) => {
+        formatter: (cell, row) => {
             const personaID = row.cells[0].data;
-            return gridjs.html(`<a href=https://www.google.com">a</a>`);
+            return gridjs.html(`<a href="./modificardatos.html?parametro=${personaID}">a</a>`);
         }
-    
+    }
         ],
     
         sort: true,
