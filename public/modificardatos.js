@@ -6,4 +6,4 @@ const id = parametros.get("parametro")
 
 console.log(id);
 
-document.getElementById("parametro").innerText = id;
+document.getElementById("apellido").value = hola;
